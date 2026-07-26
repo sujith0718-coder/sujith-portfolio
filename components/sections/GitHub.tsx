@@ -2,7 +2,16 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import {GitHubCalendar} from "react-github-calendar";
+import dynamic from "next/dynamic";
+const GitHubCalendar = dynamic(
+  () =>
+    import("react-github-calendar").then((mod) => ({
+      default: mod.GitHubCalendar,
+    })),
+  {
+    ssr: false,
+  }
+);
 import { Github, GitFork, Star, ArrowUpRight, GitCommit } from 'lucide-react';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { siteConfig, additionalProjects, certifications } from '@/lib/data';
@@ -138,13 +147,7 @@ export function GitHub() {
                 ))}
                 <span>More</span>
               </div>*/}
-              <GitHubCalendar
-             username="sujith0718-coder"
-             colorScheme="dark"
-             blockSize={12}
-             blockMargin={4}
-             fontSize={14}
-           />
+              <GitHubCalendar username="sujith0718-coder" />
 
             </div>
 
