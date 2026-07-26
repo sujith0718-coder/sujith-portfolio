@@ -25,7 +25,7 @@ export function Footer() {
               <span className="font-semibold text-foreground">{siteConfig.name}</span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm leading-relaxed">
-              CS undergraduate at PSG College of Technology, building full-stack and AI-powered applications that ship.
+              CSE undergraduate at PSG College of Technology, building full-stack and AI-powered applications that ship.
             </p>
             <div className="flex items-center gap-3 pt-2">
               {[

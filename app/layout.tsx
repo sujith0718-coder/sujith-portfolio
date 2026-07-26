@@ -1,3 +1,5 @@
+// @ts-ignore
+
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
@@ -16,13 +18,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://sujith.dev'),
+  metadataBase: new URL('https://your-vercel-url.vercel.app'),
   title: {
     default: 'Sujith E — AI Systems Engineer & Software Developer',
     template: '%s | Sujith E',
   },
   description:
-    'CS undergraduate at PSG College of Technology building full-stack and AI-powered applications with JavaScript, Python, and the Google Gemini API. 9+ shipped projects.',
+    'CSE undergraduate at PSG College of Technology building full-stack and AI-powered applications with JavaScript, Python, and the Google Gemini API. 9+ shipped projects.',
   keywords: [
     'Sujith E',
     'Software Developer',
@@ -35,21 +37,21 @@ export const metadata: Metadata = {
     'Coimbatore',
     'Portfolio',
   ],
-  authors: [{ name: 'Sujith E', url: 'https://github.com/sujith' }],
+  authors: [{ name: 'Sujith E', url: 'https://github.com/sujith0718-coder' }],
   creator: 'Sujith E',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     title: 'Sujith E — AI Systems Engineer & Software Developer',
     description:
-      'CS undergraduate building full-stack and AI-powered applications. 9+ shipped projects. Available for internships.',
+      'CSE undergraduate building full-stack and AI-powered applications. 9+ shipped projects. Available for internships.',
     siteName: 'Sujith E Portfolio',
     images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Sujith E Portfolio' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sujith E — AI Systems Engineer & Software Developer',
-    description: 'CS undergraduate building full-stack and AI-powered applications.',
+    description: 'CSE undergraduate building full-stack and AI-powered applications.',
     images: ['/og-image.png'],
   },
   robots: {

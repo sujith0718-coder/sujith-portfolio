@@ -83,8 +83,8 @@ export function Contact() {
           <motion.div variants={card} className="space-y-3">
             {[
               { icon: Mail, label: 'Email', value: siteConfig.email, href: `mailto:${siteConfig.email}` },
-              { icon: Linkedin, label: 'LinkedIn', value: 'in/sujith-e', href: siteConfig.linkedin },
-              { icon: Github, label: 'GitHub', value: '@sujith', href: siteConfig.github },
+              { icon: Linkedin, label: 'LinkedIn', value: 'Sujith E', href: siteConfig.linkedin },
+              { icon: Github, label: 'GitHub', value: 'sujith0718-coder', href: siteConfig.github },
               { icon: MapPin, label: 'Location', value: siteConfig.location, href: null },
             ].map(({ icon: Icon, label, value, href }) => (
               <div

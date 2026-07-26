@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import {GitHubCalendar} from "react-github-calendar";
 import { Github, GitFork, Star, ArrowUpRight, GitCommit } from 'lucide-react';
 import { SectionHeader } from '@/components/common/SectionHeader';
 import { siteConfig, additionalProjects, certifications } from '@/lib/data';
@@ -15,7 +16,7 @@ const langBars = [
 ];
 
 // Simulated contribution heatmap (52 weeks x 7 days)
-const contributionData = Array.from({ length: 52 * 7 }, (_, i) => {
+/*const contributionData = Array.from({ length: 52 * 7 }, (_, i) => {
   const seed = (i * 7 + 13) % 23;
   if (seed < 5) return 0;
   if (seed < 10) return 1;
@@ -30,7 +31,7 @@ const intensityClasses = [
   'bg-blue-500/40',
   'bg-blue-500/70',
   'bg-blue-500',
-];
+];*/
 
 const card = {
   hidden: { opacity: 0, y: 24 },
@@ -67,7 +68,7 @@ export function GitHub() {
                 <ArrowUpRight className="h-4 w-4 text-muted-foreground group-hover:text-blue-500 transition-colors" />
               </div>
               <p className="text-sm text-muted-foreground">GitHub Profile</p>
-              <p className="text-lg font-semibold text-foreground">@sujith</p>
+              <p className="text-lg font-semibold text-foreground">sujith0718-coder</p>
             </a>
 
             <div className="grid grid-cols-3 gap-3">
@@ -113,7 +114,7 @@ export function GitHub() {
                 <h3 className="text-sm font-semibold text-foreground">Contribution activity</h3>
                 <span className="text-xs text-muted-foreground">Last 12 months</span>
               </div>
-              <div className="flex gap-[3px] overflow-x-auto pb-2">
+              {/* <div className="flex gap-[3px] overflow-x-auto pb-2">
                 {Array.from({ length: 52 }).map((_, week) => (
                   <div key={week} className="flex flex-col gap-[3px]">
                     {Array.from({ length: 7 }).map((_, day) => {
@@ -136,7 +137,15 @@ export function GitHub() {
                   <span key={i} className={`h-[10px] w-[10px] rounded-sm ${c}`} />
                 ))}
                 <span>More</span>
-              </div>
+              </div>*/}
+              <GitHubCalendar
+             username="sujith0718-coder"
+             colorScheme="dark"
+             blockSize={12}
+             blockMargin={4}
+             fontSize={14}
+           />
+
             </div>
 
             {/* Pinned repositories */}
